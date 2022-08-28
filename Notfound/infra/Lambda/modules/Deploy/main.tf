@@ -16,4 +16,5 @@ resource "aws_lambda_function" "deploy_lambda" {
   memory_size      = var.memory_size
   package_type     = var.package_type
   tags             = var.tags
+  timeout          = var.timeout
 }

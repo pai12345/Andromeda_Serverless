@@ -50,6 +50,12 @@ variable "package_type" {
   default     = "Zip"
 }
 
+variable "timeout" {
+  type        = string
+  description = "lambda function timeout"
+  default     = 3
+}
+
 variable "tags" {
   type = object({
     type    = string,
