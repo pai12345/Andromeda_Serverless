@@ -1,0 +1,12 @@
+service: currentdats
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 128
+
+functions:
+  handler:
+    handler: index.currentdats

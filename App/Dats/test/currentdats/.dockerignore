@@ -1,0 +1,34 @@
+# Workflow
+.github/
+
+# Husky
+.husky/
+
+# Dependencies
+node_modules/
+dist/
+test/
+
+# lint files 
+.dockerfilelintrc
+.eslintignore
+.eslintrc
+
+# git
+.git
+.gitignore
+
+# config files
+commitlint.config.js
+options.json
+
+# Docker
+Dockerfiles
+
+# env Files
+.env
+
+# Misc
+LICENSE.md
+README.md
+.DS_Store

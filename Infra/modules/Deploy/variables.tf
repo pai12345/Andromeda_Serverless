@@ -3,27 +3,20 @@ variable "policy" {
   description = "Policy for Lambda function"
 }
 
-variable "zip_file" {
-  type        = string
-  description = "Path to zip file"
-}
-
 variable "execution_role_name" {
   type        = string
   description = "Execution role name for lambda"
-  default     = "notfound_lambda"
+  default     = "executionrole_lambda"
 }
 
 variable "function_name" {
   type        = string
   description = "Function name for lambda"
-  default     = "notfound"
 }
 
-variable "handler_name" {
+variable "handler" {
   type        = string
   description = "Handler name for lambda"
-  default     = "notfound.notfound"
 }
 
 variable "runtime" {
@@ -47,13 +40,25 @@ variable "memory_size" {
 variable "package_type" {
   type        = string
   description = "package type for lambda"
-  default     = "Zip"
+  default     = "Image"
 }
 
 variable "timeout" {
   type        = string
   description = "lambda function timeout"
   default     = 3
+}
+
+variable "registry_name" {
+  type        = string
+  description = "registry name"
+  default     = "andromeda_ecr"
+}
+
+variable "image_tag" {
+  type        = string
+  description = "image tag"
+  default     = "latest"
 }
 
 variable "tags" {
