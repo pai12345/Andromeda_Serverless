@@ -8,3 +8,9 @@ variable "file_name" {
   description = "File name"
   default     = "index"
 }
+
+variable "layer_zip_file" {
+  type        = string
+  description = "File name for lambda layer code"
+  default     = "package"
+}

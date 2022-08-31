@@ -27,8 +27,8 @@ variable "runtime" {
 
 variable "lambda_description" {
   type        = string
-  description = "Function for Service - Not found"
-  default     = "Function for Service - Not found"
+  description = "Function for Service - CurrentDats"
+  default     = "Function for Service - CurrentDats"
 }
 
 variable "memory_size" {
@@ -52,6 +52,11 @@ variable "timeout" {
 variable "zip_file" {
   type        = string
   description = "Path to zip file"
+}
+
+variable "layers" {
+  type        = list(string)
+  description = "Dependency Layer"
 }
 
 variable "tags" {
