@@ -17,5 +17,7 @@ resource "aws_lambda_function" "deploy_lambda" {
   tags             = var.tags
   timeout          = var.timeout
   source_code_hash = filebase64sha256(var.zip_file)
-  layers           = var.layers
+  /* layers                         = var.layers */
+  reserved_concurrent_executions = var.reserved_concurrent_executions
+  publish                        = var.publish
 }

@@ -54,9 +54,21 @@ variable "zip_file" {
   description = "Path to zip file"
 }
 
-variable "layers" {
+/* variable "layers" {
   type        = list(string)
   description = "Dependency Layer"
+} */
+
+variable "reserved_concurrent_executions" {
+  type        = number
+  description = "Set reserved concurrent executions"
+  default     = -1
+}
+
+variable "publish" {
+  type        = bool
+  description = "Publish new version"
+  default     = true
 }
 
 variable "tags" {
