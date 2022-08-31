@@ -5,20 +5,6 @@ output "output_execution_role" {
   description = "Output for execution role for Lambda function"
 }
 
-#===================Output for fetching ECR Container repo=======================#
-output "output_registry" {
-  value       = data.aws_ecr_repository.registry
-  sensitive   = false
-  description = "Output for fetching ECR Container repo"
-}
-
-#===================Output for fetching ECR Container image=======================#
-output "output_image" {
-  value       = data.aws_ecr_image.image
-  sensitive   = false
-  description = "Output for fetching ECR Container image"
-}
-
 #===================Output for Deploying lambda function=====================#
 output "output_deploy_lambda" {
   value       = aws_lambda_function.deploy_lambda

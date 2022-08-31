@@ -40,7 +40,7 @@ variable "memory_size" {
 variable "package_type" {
   type        = string
   description = "package type for lambda"
-  default     = "Image"
+  default     = "Zip"
 }
 
 variable "timeout" {
@@ -49,16 +49,9 @@ variable "timeout" {
   default     = 3
 }
 
-variable "registry_name" {
+variable "zip_file" {
   type        = string
-  description = "registry name"
-  default     = "andromeda_ecr"
-}
-
-variable "image_tag" {
-  type        = string
-  description = "image tag"
-  default     = "latest"
+  description = "Path to zip file"
 }
 
 variable "tags" {
