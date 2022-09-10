@@ -19,3 +19,17 @@ module "generate_create_lambda_alias" {
   source        = "./modules/CreateAlias/"
   function_name = module.generate_deploy_lambda.output_deploy_lambda.arn
 }
+
+# module to add function to function
+module "generate_create_function_url" {
+  source        = "./modules/AddFunctionURL/"
+  function_name = module.generate_deploy_lambda.output_deploy_lambda.function_name
+  qualifier     = module.generate_create_lambda_alias.output_create_alias.name
+}
+
+# module to allow api gateway access to lambda
+module "generate_allow_apigateway" {
+  source        = "./modules/APIGateway/"
+  function_name = module.generate_deploy_lambda.output_deploy_lambda.function_name
+  qualifier     = module.generate_create_lambda_alias.output_create_alias.name
+}

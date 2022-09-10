@@ -18,3 +18,10 @@ output "output_generate_create_lambda_alias" {
   sensitive   = false
   description = "Output for Module - creating lambda alias"
 }
+
+#===================Module Output for adding function url to lambda=====================#
+output "output_ggenerate_create_function_url" {
+  value       = module.generate_create_function_url
+  sensitive   = false
+  description = "Output for Module - adding function url to lambda"
+}
