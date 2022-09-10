@@ -25,3 +25,10 @@ output "output_ggenerate_create_function_url" {
   sensitive   = false
   description = "Output for Module - adding function url to lambda"
 }
+
+#===================Module Output for allowing access to api gateway=====================#
+output "output_generate_allow_apigateway" {
+  value       = module.generate_allow_apigateway
+  sensitive   = false
+  description = "Output for Module - allowing access to api gateway"
+}
