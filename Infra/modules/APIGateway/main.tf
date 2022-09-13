@@ -5,5 +5,5 @@ resource "aws_lambda_permission" "allow_apigateway" {
   function_name = var.function_name
   principal     = "apigateway.amazonaws.com"
   source_arn    = "arn:aws:apigateway:us-east-1::/restapis/amo7j8kbgg/*/*"
-  qualifier = var.qualifier
+  qualifier     = var.qualifier
 }
