@@ -15,9 +15,10 @@ module "generate_deploy_lambda" {
   policy        = file("${path.module}/policy/lambda.json")
   handler       = "${var.file_name}.${var.handler_name}"
   function_name = var.handler_name
-  zip_file      = "${path.module}/../App/Dats/${var.file_name}.zip"
+  zip_file      = "${path.module}/../App/${var.folder_name}/${var.file_name}.zip"
   /* layers         = [module.generate_deploy_layer.output_create_layer.arn] */
 }
+
 
 # module to create lambda alias
 module "generate_create_lambda_alias" {

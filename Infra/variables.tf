@@ -1,7 +1,7 @@
 variable "handler_name" {
   type        = string
   description = "Handler name"
-  default     = "currentdats"
+  default     = "notfound"
 }
 variable "file_name" {
   type        = string
@@ -9,6 +9,11 @@ variable "file_name" {
   default     = "index"
 }
 
+variable "folder_name" {
+  type        = string
+  description = "Folder name"
+  default     = "Notfound"
+}
 variable "layer_zip_file" {
   type        = string
   description = "File name for lambda layer code"
