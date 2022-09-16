@@ -1,6 +1,11 @@
+# generate random id
+resource "random_id" "random" {
+  byte_length = var.byte_length
+}
+
 # create role for lambda
 resource "aws_iam_role" "execution_role" {
-  name               = var.execution_role_name
+  name               = "${var.execution_role_name}${random_id.random.id}"
   assume_role_policy = var.policy
 }
 

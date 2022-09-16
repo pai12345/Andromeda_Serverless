@@ -1,3 +1,10 @@
+#===================Generate random id=====================#
+output "output_random" {
+  value       = random_id.random
+  sensitive   = false
+  description = "Output for generating random id"
+}
+
 #===================Output for Execution role for lambda function=====================#
 output "output_execution_role" {
   value       = aws_iam_role.execution_role

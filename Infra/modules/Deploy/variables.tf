@@ -3,6 +3,12 @@ variable "policy" {
   description = "Policy for Lambda function"
 }
 
+variable "byte_length" {
+  type        = number
+  description = "Byte length"
+  default     = 1
+}
+
 variable "execution_role_name" {
   type        = string
   description = "Execution role name for lambda"
