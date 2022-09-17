@@ -1,7 +1,7 @@
 variable "handler_name" {
   type        = string
   description = "Handler name"
-  default     = "notfound"
+  default     = "currentdats"
 }
 variable "file_name" {
   type        = string
@@ -12,7 +12,7 @@ variable "file_name" {
 variable "folder_name" {
   type        = string
   description = "Folder name"
-  default     = "Notfound"
+  default     = "Dats"
 }
 variable "layer_zip_file" {
   type        = string
